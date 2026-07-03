@@ -1593,7 +1593,7 @@ color:#9BE39D;
 @media (max-width:768px){
 
     .message{
-        flex-direction:column-reverse;
+        flex-direction:column-column;
         align-items:center;
         text-align:center;
         gap:30px;
