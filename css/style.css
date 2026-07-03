@@ -1580,10 +1580,11 @@ color:#9BE39D;
 .message-photo img{
     width:100%;
     max-width:360px;
-    margin-left:-260px; /* ←ここだけ調整 */
+    margin-left:-260px;   /* PCだけ左へ寄せる */
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
+
 
 /*==========================
 スマホ
@@ -1591,31 +1592,35 @@ color:#9BE39D;
 
 @media (max-width:768px){
 
-.message{
-    flex-direction:column-reverse;
-    text-align:center;
-    gap:30px;
-    margin:50px auto;
-}
+    .message{
+        flex-direction:column-reverse;
+        align-items:center;
+        text-align:center;
+        gap:30px;
+        margin:50px auto;
+    }
 
-.message-text{
-    width:100%;
-}
+    .message-text{
+        width:100%;
+    }
 
-.message-photo{
-    flex:none;
-    width:100%;
-}
+    .message-photo{
+        flex:none;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
 
-@media (max-width:768px){
+    .message-photo img{
+        width:100%;
+        max-width:280px;
 
-.message-photo img{
-    max-width:280px;
-    width:100%;
-    margin-left:0;   /* ←追加 */
-}
+        /* PC用を完全にリセット */
+        margin-left:0;
+        margin-right:0;
+        transform:none;
+    }
 
-}
 }
 
 h2{
