@@ -1585,7 +1585,6 @@ color:#9BE39D;
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-
 /*==========================
 スマホ
 ==========================*/
@@ -1593,7 +1592,8 @@ color:#9BE39D;
 @media (max-width:768px){
 
     .message{
-        flex-direction:column-column;
+        display:flex;
+        flex-direction:column;   /* ←ここが正しい */
         align-items:center;
         text-align:center;
         gap:30px;
@@ -1602,23 +1602,23 @@ color:#9BE39D;
 
     .message-text{
         width:100%;
+        order:1;
     }
 
     .message-photo{
-        flex:none;
         width:100%;
+        flex:none;
         display:flex;
         justify-content:center;
+        order:2;
     }
 
     .message-photo img{
         width:100%;
         max-width:280px;
 
-        /* PC用を完全にリセット */
-        margin-left:0;
-        margin-right:0;
-        transform:none;
+        margin:0 !important;
+        transform:none !important;
     }
 
 }
